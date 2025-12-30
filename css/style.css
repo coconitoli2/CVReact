@@ -1,0 +1,386 @@
+/* NAVBAR */
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff !important;
+}
+
+.nav-link {
+    color: #fff !important;
+    margin-left: 20px;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    color: #444;
+    background-color: #EEE;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+    font-weight: 600;
+    color: #1e1e1e;
+}
+
+nav {
+    display: flex;
+    /* pour aligner les éléments horizontalement */
+    justify-content: space-between;
+    /* logo à gauche, liens à droite */
+    align-items: center;
+    padding: 20px 50px;
+    /* espace autour */
+    background-color: rgba(0, 0, 0, 0.7);
+    /* fond semi-transparent */
+}
+
+.NavLogoNom {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.LienPages {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    /* espace entre les liens */
+}
+
+.LienPages:hover {
+    text-decoration: underline;
+}
+
+/* MAIN avec image fixe et texte centré */
+main {
+    height: 100vh;
+    background-image: url("../images/OIP.jfif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+main::before {
+    content: "";
+    /* obligatoire ! */
+    position: absolute;
+    top: 0;
+    /* coin supérieur gauche */
+    left: 0;
+    /* coin supérieur gauche */
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 0;
+    /* derrière le texte */
+    pointer-events: none;
+}
+
+main h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+main h2 {
+    font-size: 32px;
+}
+
+.BoutonAPropos {
+    color: white;
+    background-color: #007bff;
+}
+
+/* Conteneur texte + image */
+.about-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    /* espace entre texte et image */
+    margin-bottom: 50px;
+}
+
+/* Texte avec largeur maximale pour ne pas toucher l'image */
+.about-text {
+    flex: 1;
+    max-width: 60%;
+    /* texte limité pour ne pas dépasser l'image */
+}
+
+/* Image à droite */
+.about-image {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    /* image collée à droite */
+}
+
+/* Image */
+.about-image img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.skills {
+    width: 100%;
+}
+
+.skill {
+    margin-bottom: 15px;
+}
+
+.skill span {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.skill-bar {
+    background-color: #ddd;
+    height: 15px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.skill-fill {
+    height: 100%;
+    width: 0;
+    border-radius: 8px;
+    background-color: #007bff;
+}
+
+.skill-fill {
+    height: 100%;
+    border-radius: 8px;
+}
+
+.skill-fill.html5 {
+    background-color: #e34f26;
+}
+
+.skill-fill.css3 {
+    background-color: #00eeff;
+}
+
+.skill-fill.js {
+    background-color: #f0db4f;
+}
+
+.skill-fill.php {
+    background-color: #009407c7;
+}
+
+.skill-fill.react {
+    background-color: #0d6efd;
+}
+
+/* Rectangle clair contenant les liens */
+.footer-links {
+    background-color: rgba(255, 255, 255, 0.9);
+    /* rectangle légèrement blanc */
+    padding: 10px 50px;
+    text-align: center;
+}
+
+.footer-links a {
+    color: #000;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* Barre noire avec le texte personnalisé */
+.footer-bar {
+    background-color: #000;
+    color: #fff;
+    padding: 15px 50px;
+    text-align: center;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    /* espace entre le cercle et le texte */
+}
+
+/* Cercle avec © */
+.circle-c {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    border-radius: 50%;
+    background-color: #fff;
+    color: #000;
+    font-size: 12px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.footer-social {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.footer-social a img {
+    width: 30px;
+    /* taille des icônes */
+    height: 30px;
+    margin: 0 10px;
+    /* espace entre les icônes */
+    transition: transform 0.3s;
+}
+
+.footer-social a img:hover {
+    transform: scale(1.1);
+    /* effet au survol */
+}
+
+.footer-contact-block {
+    text-align: left;
+    /* tout aligné à gauche */
+    padding: 20px 50px;
+    /* espace depuis le bord */
+}
+
+.footer-contact a {
+    display: block;
+    /* chaque lien sur sa ligne */
+    margin: 5px 0;
+    color: #000;
+    text-decoration: none;
+}
+
+.footer-contact a:hover {
+    text-decoration: underline;
+}
+
+/* Icônes sociales sous le bloc contact, alignées à gauche */
+.footer-social {
+    margin-top: 15px;
+    text-align: left;
+}
+
+.footer-social a img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    /* espace horizontal entre icônes */
+    transition: transform 0.3s;
+}
+
+.footer-social a img:hover {
+    transform: scale(1.1);
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    /* contact à gauche, dernières réalisations au centre */
+    align-items: flex-start;
+    /* pour aligner les deux blocs en haut */
+    padding: 20px 50px;
+}
+
+.footer-contact {
+    flex: 1;
+    /* occupe la partie gauche */
+}
+
+.footer-dernieres {
+    flex: 1;
+    text-align: center;
+    /* centrer les liens dans la moitié droite */
+}
+
+.footer-dernieres a {
+    display: block;
+    /* un lien par ligne */
+    margin: 5px 0;
+    color: #000;
+    text-decoration: none;
+}
+
+.footer-dernieres a:hover {
+    text-decoration: underline;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    /* laisse les blocs s'étaler */
+    padding: 40px 50px;
+    gap: 30px;
+    /* espace entre les blocs */
+    flex-wrap: wrap;
+    /* pour les écrans plus petits */
+}
+
+.footer-contact,
+.footer-dernieres,
+.footer-Articles {
+    flex: 1;
+    /* chaque bloc prend la même place */
+    max-width: 250px;
+    /* limite la largeur pour que ça reste compact */
+    text-align: center;
+    /* centre le contenu dans le bloc */
+}
+
+.footer-contact h1,
+.footer-dernieres h1,
+.footer-Articles h1 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.footer-dernieres a,
+.footer-Articles a {
+    display: block;
+    /* liens en bloc vertical */
+    margin-bottom: 8px;
+    color: #000;
+    text-decoration: none;
+}
+
+.footer-dernieres a:hover,
+.footer-Articles a:hover {
+    text-decoration: underline;
+}
+
+/* Les icônes sociales restent à gauche */
+.footer-contact .footer-social {
+    display: flex;
+    justify-content: center;
+    /* ou flex-start si tu veux à gauche */
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.footer-contact .footer-social a img {
+    width: 30px;
+    height: 30px;
+}

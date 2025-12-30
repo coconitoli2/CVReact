@@ -1,0 +1,352 @@
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+.title-body {
+    font-weight: bold;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    /* empiler les rectangles */
+    gap: 15px;
+    /* espace entre eux */
+    align-items: center;
+    /* centrer horizontalement */
+}
+
+.box {
+    width: 1100px;
+    height: 60px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s;
+    position: relative;
+}
+
+.box input {
+    display: none;
+    /* cacher la checkbox */
+}
+
+.box .text-hidden {
+    display: none;
+    /* caché au départ */
+}
+
+.box input:checked~.text-hidden {
+    display: block;
+    /* afficher le texte si checkbox cochée */
+}
+
+.box label h1 {
+    margin: 0;
+}
+
+.box.open {
+    height: auto;
+}
+
+.box.open .text-hidden {
+    display: block;
+}
+
+.text-hidden p,
+.text-hidden a {
+    margin-left: 5px;
+}
+
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff !important;
+}
+
+.nav-link {
+    color: #fff !important;
+    margin-left: 20px;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: rgba(0, 0, 0, 0.7);
+    /* fond semi-transparent */
+}
+
+.NavLogoNom {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.LienPages {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.LienPages:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding-bottom: 50px;
+}
+
+.galerie {
+    background: white;
+    margin-top: 30px;
+    padding: 40px 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.footer-links {
+    background-color: rgba(255, 255, 255, 0.9);
+    /* rectangle légèrement blanc */
+    padding: 10px 50px;
+    text-align: center;
+}
+
+.footer-links a {
+    color: #000;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* Barre noire avec le texte personnalisé */
+.footer-bar {
+    background-color: #000;
+    color: #fff;
+    padding: 15px 50px;
+    text-align: center;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    /* espace entre le cercle et le texte */
+}
+
+/* Cercle avec © */
+.circle-c {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    border-radius: 50%;
+    background-color: #fff;
+    color: #000;
+    font-size: 12px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.footer-social {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.footer-social a img {
+    width: 30px;
+    /* taille des icônes */
+    height: 30px;
+    margin: 0 10px;
+    /* espace entre les icônes */
+    transition: transform 0.3s;
+}
+
+.footer-social a img:hover {
+    transform: scale(1.1);
+    /* effet au survol */
+}
+
+.footer-contact-block {
+    text-align: left;
+    /* tout aligné à gauche */
+    padding: 20px 50px;
+    /* espace depuis le bord */
+}
+
+.footer-contact a {
+    display: block;
+    /* chaque lien sur sa ligne */
+    margin: 5px 0;
+    color: #000;
+    text-decoration: none;
+}
+
+.footer-contact a:hover {
+    text-decoration: underline;
+}
+
+/* Icônes sociales sous le bloc contact, alignées à gauche */
+.footer-social {
+    margin-top: 15px;
+    text-align: left;
+}
+
+.footer-social a img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    /* espace horizontal entre icônes */
+    transition: transform 0.3s;
+}
+
+.footer-social a img:hover {
+    transform: scale(1.1);
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    /* contact à gauche, dernières réalisations au centre */
+    align-items: flex-start;
+    /* pour aligner les deux blocs en haut */
+    padding: 20px 50px;
+}
+
+.footer-contact {
+    flex: 1;
+    /* occupe la partie gauche */
+}
+
+.footer-dernieres {
+    flex: 1;
+    text-align: center;
+    /* centrer les liens dans la moitié droite */
+}
+
+.footer-dernieres a {
+    display: block;
+    /* un lien par ligne */
+    margin: 5px 0;
+    color: #000;
+    text-decoration: none;
+}
+
+.footer-dernieres a:hover {
+    text-decoration: underline;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    /* laisse les blocs s'étaler */
+    padding: 40px 50px;
+    gap: 30px;
+    /* espace entre les blocs */
+    flex-wrap: wrap;
+    /* pour les écrans plus petits */
+}
+
+.footer-contact,
+.footer-dernieres,
+.footer-Articles {
+    flex: 1;
+    /* chaque bloc prend la même place */
+    max-width: 250px;
+    /* limite la largeur pour que ça reste compact */
+    text-align: center;
+    /* centre le contenu dans le bloc */
+}
+
+.footer-contact h1,
+.footer-dernieres h1,
+.footer-Articles h1 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.footer-dernieres a,
+.footer-Articles a {
+    display: block;
+    /* liens en bloc vertical */
+    margin-bottom: 8px;
+    color: #000;
+    text-decoration: none;
+}
+
+.footer-dernieres a:hover,
+.footer-Articles a:hover {
+    text-decoration: underline;
+}
+
+/* Les icônes sociales restent à gauche */
+.footer-contact .footer-social {
+    display: flex;
+    justify-content: center;
+    /* ou flex-start si tu veux à gauche */
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.footer-contact .footer-social a img {
+    width: 30px;
+    height: 30px;
+}
+
+@media (max-width: 768px) {
+
+    /* Bannière un peu plus petite sur mobile */
+    .banniere {
+        height: 120px;
+    }
+
+    /* Carte 1 par ligne */
+    .carte-realisation {
+        margin-bottom: 20px;
+    }
+
+    /* Supprime les hauteurs fixes des images si besoin */
+    .carte-realisation img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Footer : passe en colonne */
+    .footer-top {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+        padding: 20px;
+    }
+
+    /* Chaque bloc prend toute la largeur */
+    .footer-contact,
+    .footer-dernieres,
+    .footer-Articles {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    /* Icônes centrées */
+    .footer-contact .footer-social {
+        justify-content: center;
+    }
+
+    /* Les liens du footer */
+    .footer-links {
+        padding: 10px;
+    }
+}
